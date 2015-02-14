@@ -1,7 +1,7 @@
 Requirements:
 -------------------------
 Generic:
-* Novacoin >=0.4.4.6
+* Gamecoin >=0.4.4.6
 * Python >=2.6
 * Twisted >=10.0.0
 * python-argparse (for Python =2.6)
@@ -20,8 +20,8 @@ Windows:
 
 Running P2Pool:
 -------------------------
-In order to run P2Pool with the Novacoin network, you would need to build and install the
-ltc_scrypt module that includes the scrypt proof of work code that Novacoin uses for hashes.
+In order to run P2Pool with the Gamecoin network, you would need to build and install the
+ltc_scrypt module that includes the scrypt proof of work code that Gamecoin uses for hashes.
 
 Linux:
 

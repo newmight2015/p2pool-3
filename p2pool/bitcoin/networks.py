@@ -22,7 +22,7 @@ def get_subsidy(bitcoind, target):
     defer.returnValue(res)
 
 nets = dict(
-    novacoin=math.Object(
+    gamecoin=math.Object(
         P2P_PREFIX='e4e8e9e5'.decode('hex'),
         P2P_PORT=11067,
         ADDRESS_VERSION=38,
@@ -34,7 +34,7 @@ nets = dict(
         SUBSIDY_FUNC=lambda bitcoind, target: get_subsidy(bitcoind, target),
         BLOCK_PERIOD=600, # s
         SYMBOL='GMC',
-        CONF_FILE_FUNC=lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'NovaCoin') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/NovaCoin/') if platform.system() == 'Darwin' else os.path.expanduser('~/.novacoin'), 'novacoin.conf'),
+        CONF_FILE_FUNC=lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'GameCoin') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/GameCoin/') if platform.system() == 'Darwin' else os.path.expanduser('~/.gamecoin'), 'gamecoin.conf'),
         BLOCK_EXPLORER_URL_PREFIX='http:trmserver.no-ip.org',
         ADDRESS_EXPLORER_URL_PREFIX='http:trmserver.no-ip.org',
         TX_EXPLORER_URL_PREFIX='http:trmserver.no-ip.org',
@@ -42,7 +42,7 @@ nets = dict(
         DUMB_SCRYPT_DIFF=2**16,
         DUST_THRESHOLD=0.01e6,
     ),
-    novacoin_testnet=math.Object(
+    gamecoin_testnet=math.Object(
         P2P_PREFIX='cdf2c0ef'.decode('hex'),
         P2P_PORT=17777,
         ADDRESS_VERSION=111,
@@ -53,11 +53,11 @@ nets = dict(
         )),
         SUBSIDY_FUNC=lambda bitcoind, target: get_subsidy(bitcoind, target),
         BLOCK_PERIOD=600, # s
-        SYMBOL='tNVC',
-        CONF_FILE_FUNC=lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'NovaCoin') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/NovaCoin/') if platform.system() == 'Darwin' else os.path.expanduser('~/.novacoin'), 'novacoin.conf'),
-        BLOCK_EXPLORER_URL_PREFIX='http://novacoin.su/block/',
-        ADDRESS_EXPLORER_URL_PREFIX='http://novacoin.su/address/',
-        TX_EXPLORER_URL_PREFIX='http://novacoin.su/tx/',
+        SYMBOL='tGMC',
+        CONF_FILE_FUNC=lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'GameCoin') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/GameCoin/') if platform.system() == 'Darwin' else os.path.expanduser('~/.gamecoin'), 'gamecoin.conf'),
+        BLOCK_EXPLORER_URL_PREFIX='http://gamecoin.su/block/',
+        ADDRESS_EXPLORER_URL_PREFIX='http://gamecoin.su/address/',
+        TX_EXPLORER_URL_PREFIX='http://gamecoin.su/tx/',
         SANE_TARGET_RANGE=(2**256//1000000000 - 1, 2**256//1000 - 1),
         DUMB_SCRYPT_DIFF=2**16,
         DUST_THRESHOLD=0.01e6,
