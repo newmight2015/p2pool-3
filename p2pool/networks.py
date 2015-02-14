@@ -17,11 +17,11 @@ nets = dict(
         SPREAD=3, # blocks
         IDENTIFIER='e037d5b8c6923610'.decode('hex'),
         PREFIX='7208c1a53ef659b0'.decode('hex'),
-        P2P_PORT=21067,
+        P2P_PORT=12067,
         MIN_TARGET=0,
         MAX_TARGET=2**256//2**20 - 1,
         PERSIST=True,
-        WORKER_PORT=8336,
+        WORKER_PORT=1436,
         BOOTSTRAP_ADDRS='trmserver.no-ip.org'.split(' '),
         ANNOUNCE_CHANNEL='#p2pool-alt',
         VERSION_CHECK=lambda v: v >= 60011,
