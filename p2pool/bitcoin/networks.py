@@ -23,7 +23,7 @@ def get_subsidy(bitcoind, target):
 
 nets = dict(
     gamecoin=math.Object(
-        P2P_PREFIX='e4e8e9e5'.decode('hex'),
+        P2P_PREFIX='e4e1e9e5'.decode('hex'),
         P2P_PORT=11067,
         ADDRESS_VERSION=38,
         RPC_PORT=22067,
